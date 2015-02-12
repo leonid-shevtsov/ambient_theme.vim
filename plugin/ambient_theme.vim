@@ -7,8 +7,8 @@ if has('mac')
   endif
 
   let g:loaded_AmbientTheme = 1
-  let g:AmbientThemeLight = "autumnleaf"
-  let g:AmbientThemeDark = "railscast2"
+  let g:AmbientThemeLight = ""
+  let g:AmbientThemeDark = ""
 
   if !exists("g:AmbientLightThreshold")
     let g:AmbientLightThreshold = 1000000
@@ -29,14 +29,18 @@ if has('mac')
 
     if g:AmbientLightAverage > g:AmbientLightThreshold
       set background=light
-      execute 'colorscheme'  fnameescape(g:AmbientThemeLight)
-      let g:colors_name = g:AmbientThemeLight
-      execute 'doautocmd ColorScheme'  fnameescape(g:AmbientThemeLight)
+      if !empty(g:AmbientThemeLight)
+        execute 'colorscheme'  fnameescape(g:AmbientThemeLight)
+        let g:colors_name = g:AmbientThemeLight
+        execute 'doautocmd ColorScheme'  fnameescape(g:AmbientThemeLight)
+     endif
     else
       set background=dark
-      execute 'colorscheme'  fnameescape(g:AmbientThemeDark)
-      let g:colors_name = g:AmbientThemeDark
-      execute 'doautocmd ColorScheme'  fnameescape(g:AmbientThemeDark)
+      if !empty(g:AmbientThemeDark)
+        execute 'colorscheme'  fnameescape(g:AmbientThemeDark)
+        let g:colors_name = g:AmbientThemeDark
+        execute 'doautocmd ColorScheme'  fnameescape(g:AmbientThemeDark)
+      endif
     end
   endfunction 
 end
