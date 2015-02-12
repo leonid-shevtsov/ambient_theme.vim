@@ -5,10 +5,7 @@ if has('mac')
   if exists("g:loaded_AmbientTheme") || &cp
     finish
   endif
-" Test for colorscheme presence
-  if exists("g:colors_name") 
-      finish
-  endif
+
   let g:loaded_AmbientTheme = 1
   let g:AmbientThemeLight = "autumnleaf"
   let g:AmbientThemeDark = "railscast2"
