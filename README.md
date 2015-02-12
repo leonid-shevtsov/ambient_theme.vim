@@ -21,6 +21,10 @@ As usual; the plugin is Pathogen-compatible.
 
 `echo g:AmbientLightValue` will let you see the current value.
 
+`g:AmbientThemeLight` is the theme to associate when it is bright enough. Assign it as a string. Defaults to 'autumnleaf'.
+
+`g:AmbientThemeDark` is the theme to associate when it is dark. Defaults to 'railscast2'.
+
 # Compiling the binary yourself
 
 There's a binary that reads the light sensor value. You'll need gcc to compile it. Otherwise, it's as simple as:
