@@ -6,6 +6,8 @@ Set your vim theme's background based on the ambient lighting
 
 It switches the `background` variable from `light` to `dark`. Works smoothly with [solarized](http://ethanschoonover.com/solarized).
 
+Optionally, you can set the themes if you want a separate one for each.
+
 # Limitations
 
 Vim doesn't have a timer. So this uses [a hack](http://vim.wikia.com/wiki/Timer_to_execute_commands_periodically) which only works in Normal mode.
