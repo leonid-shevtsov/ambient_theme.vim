@@ -23,9 +23,9 @@ As usual; the plugin is Pathogen-compatible.
 
 `echo g:AmbientLightValue` will let you see the current value.
 
-`g:AmbientThemeLight` is the theme to associate when it is bright enough. Assign it as a string. Defaults to 'autumnleaf'.
+`g:AmbientThemeLight` is the theme to associate when it is bright enough. Assign it as a string. Defaults to ''.
 
-`g:AmbientThemeDark` is the theme to associate when it is dark. Defaults to 'railscast2'.
+`g:AmbientThemeDark` is the theme to associate when it is dark. Defaults to ''.
 
 # Compiling the binary yourself
 
