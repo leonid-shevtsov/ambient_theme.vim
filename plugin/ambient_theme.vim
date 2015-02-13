@@ -7,8 +7,12 @@ if has('mac')
   endif
 
   let g:loaded_AmbientTheme = 1
-  let g:AmbientThemeLight = ""
-  let g:AmbientThemeDark = ""
+  if !exists("g:AmbientThemeLight")
+    let g:AmbientThemeLight = ""
+  end
+  if !exists("g:AmbientThemeDark")
+    let g:AmbientThemeDark = ""
+  end
 
   if !exists("g:AmbientLightThreshold")
     let g:AmbientLightThreshold = 1000000
