@@ -5,7 +5,14 @@ if has('mac')
   if exists("g:loaded_AmbientTheme") || &cp
     finish
   endif
+
   let g:loaded_AmbientTheme = 1
+  if !exists("g:AmbientThemeLight")
+    let g:AmbientThemeLight = ""
+  end
+  if !exists("g:AmbientThemeDark")
+    let g:AmbientThemeDark = ""
+  end
 
   if !exists("g:AmbientLightThreshold")
     let g:AmbientLightThreshold = 1000000
@@ -26,8 +33,18 @@ if has('mac')
 
     if g:AmbientLightAverage > g:AmbientLightThreshold
       set background=light
+      if !empty(g:AmbientThemeLight)
+        execute 'colorscheme'  fnameescape(g:AmbientThemeLight)
+        let g:colors_name = g:AmbientThemeLight
+        execute 'doautocmd ColorScheme'  fnameescape(g:AmbientThemeLight)
+     endif
     else
       set background=dark
+      if !empty(g:AmbientThemeDark)
+        execute 'colorscheme'  fnameescape(g:AmbientThemeDark)
+        let g:colors_name = g:AmbientThemeDark
+        execute 'doautocmd ColorScheme'  fnameescape(g:AmbientThemeDark)
+      endif
     end
   endfunction 
 end

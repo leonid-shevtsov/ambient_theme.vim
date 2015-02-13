@@ -6,6 +6,8 @@ Set your vim theme's background based on the ambient lighting
 
 It switches the `background` variable from `light` to `dark`. Works smoothly with [solarized](http://ethanschoonover.com/solarized).
 
+Optionally, you can set the themes if you want a separate one for each.
+
 # Limitations
 
 Vim doesn't have a timer. So this uses [a hack](http://vim.wikia.com/wiki/Timer_to_execute_commands_periodically) which only works in Normal mode.
@@ -20,6 +22,10 @@ As usual; the plugin is Pathogen-compatible.
 `g:AmbientLightThreshold` is the sensor value which triggers the switch. The default is 100000; you can experiment yourself if you want.
 
 `echo g:AmbientLightValue` will let you see the current value.
+
+`g:AmbientThemeLight` is the theme to associate when it is bright enough. Assign it as a string. Defaults to ''.
+
+`g:AmbientThemeDark` is the theme to associate when it is dark. Defaults to ''.
 
 # Compiling the binary yourself
 
